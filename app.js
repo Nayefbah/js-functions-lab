@@ -7,16 +7,16 @@ const maxOfTwoNumber = (x, y) => {
 }
 console.log('Exercise 1 result', maxOfTwoNumber(3, 9))
 
-function isAdult(age) {
+const isAdult = (age) => {
   if (age >= 18) {
-    return (isAdult = 'Adult')
+    return 'Adult'
   } else {
-    return (isAdult = 'Below')
+    return 'Below'
   }
 }
 console.log('Exercise 2 result', isAdult(21))
 
-function isCharAVowel(letter) {
+const isCharAVowel = (letter) => {
   if (
     letter === 'a' ||
     letter === 'e' ||
@@ -24,14 +24,52 @@ function isCharAVowel(letter) {
     letter === 'u' ||
     letter === 'i'
   ) {
-    return (isCharAVowel = true)
+    return true
   } else {
-    return (isCharAVowel = false)
+    return false
   }
 }
 console.log('Exercise 3 Result:', isCharAVowel('a'))
 
-function generateEmail(name, dom) {
-  return (generateEmail = name + '@' + dom)
+const generateEmail = (name, dom) => {
+  return name + '@' + dom
 }
 console.log('Exercise 4 Result:', generateEmail('johnsmith', 'example.com'))
+
+const greetUser = (name, day) => {
+  return 'Good' + day + ' ' + name
+}
+console.log('Exercise 5 Result:', greetUser('Sam', 'morning'))
+
+const maxOfThree = (a, b, c) => {
+  if (a > b) {
+    if (a > c) {
+      return a
+    } else if (b > c) {
+      return b
+    } else {
+      return c
+    }
+  } else if (b > c) {
+    return b
+  } else {
+    return c
+  }
+}
+console.log('Exercise 6 Result:', maxOfThree(5, 10, 8))
+
+const calculateTip = (num1, num2) => {
+  return Math.round((num1 + num2) * (14 / 100))
+}
+console.log('Exercise 7 Result:', calculateTip(50, 20))
+
+const convertTemperature = (tem, x) => {
+  if (x.toUpperCase() === 'C') {
+    return tem * 2.8 + ' F'
+  } else if (x.toUpperCase() === 'F') {
+    return tem + ' ' + x.toUpperCase()
+  } else {
+    return 'Error Temp unit'
+  }
+}
+console.log('Exercise 8 Result:', convertTemperature(32, 'c'))
