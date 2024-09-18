@@ -73,3 +73,48 @@ const convertTemperature = (tem, x) => {
   }
 }
 console.log('Exercise 8 Result:', convertTemperature(32, 'c'))
+
+const basicCalculator = (x, y, func) => {
+  if (func.toLowerCase() === 'add') {
+    return x + y
+  } else if (func.toLowerCase() === 'subtract') {
+    return x - y
+  } else if (func.toLowerCase() === 'multiply') {
+    return x * y
+  } else if (func.toLowerCase() === 'divide') {
+    return x / y
+  } else {
+    return 'please chose opration'
+  }
+}
+console.log('Exercise 9 Result:', basicCalculator(10, 5, 'subtract'))
+
+const calculateGrade = (x) => {
+  if (x >= 90) {
+    return 'A'
+  } else if (x >= 80) {
+    return 'B'
+  } else if (x >= 70) {
+    return 'C'
+  } else if (x >= 60) {
+    return 'D'
+  } else {
+    return 'F'
+  }
+}
+console.log('Exercise 10 Result:', calculateGrade(85))
+
+const createUsername = (fname, lname) => {
+  let fn1 = fname.length
+  let ln1 = lname.length
+  let fn2 = fname.substring(0, 3)
+  let ln2 = lname.substring(0, 3)
+  let sum = fn1 + ln1
+  return fn2 + ln2 + sum
+}
+console.log('Exercise 11 Result:', createUsername('Samantha', 'Green'))
+
+const numArgs = (...arguments) => {
+  return arguments.length
+}
+console.log('Exercise 12 Result:', numArgs(1, 2, 3, 4))
